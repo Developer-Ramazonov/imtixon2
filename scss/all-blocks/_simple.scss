@@ -1,0 +1,270 @@
+.simple{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    &::after{
+        // overflow: hidden;
+        content: "";
+        position: absolute;
+        right: -390px;
+        top: 2050px;
+        width: 780px;
+        height: 780px;
+        background-color: #36536B;
+        border-radius: 50%;
+        opacity: .15;
+        z-index: -1;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .simple__text{
+            width: 445px;
+            &__title{
+                font-family: DM Serif Display;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 48px;
+                line-height: 56px;
+                /* identical to box height, or 117% */
+                
+                letter-spacing: -0.369231px;
+                
+                color: #36536B;
+            }
+            &__desc{
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 28px;
+                /* or 187% */
+                
+                
+                color: #6C8294;
+            }
+        }
+        &__img{
+            display: flex;
+            // position: absolute;
+            // width: 430px;
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     top: 100%;
+            //     width: 500px;
+            //     height: 500px;
+            //     height: auto;
+            //     background: url("./img/simple-phone222.svg");
+            //     border: 1px solid black;
+
+            // }
+            &1{
+                margin-right: 170px;
+            }
+            &2{
+
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        &__card{
+            text-align: center;
+            width: 350px;
+        }
+        .card{
+            margin-top: 200px;
+            &__title{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 25px;
+                /* identical to box height, or 139% */
+                
+                text-align: center;
+                letter-spacing: -0.138462px;
+                
+                color: #36536B;
+            }
+            &__desc{
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 25px;
+                /* or 167% */
+                
+                text-align: center;
+                letter-spacing: -0.115385px;
+                
+                color: #6C8294;
+            }
+
+            &:nth-child(1){
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background: url("../img/simple-money.svg");
+                    width: 106px;
+                    height: 106px;
+                    top: 2840px;
+                    left: 240px;
+                }
+            }
+            &:nth-child(2){
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 2840px;
+                    left: 620px;
+                    width: 106px;
+                    height: 106px;
+                    background: url("../img/simple-statistic.svg");
+                }
+            }
+            &:nth-child(3){
+                &::before{
+                    position: absolute;
+                    content: "";
+                    top: 2840px;
+                    width: 106px;
+                    right: 240px;
+                    height: 106px;
+                    background: url("../img/simple-sud.svg");
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .simple{
+        
+        
+        &::after{
+            display: none;
+        }
+    
+        &__top{
+            flex-direction: column-reverse;
+            .simple__text{
+                text-align: center;
+                &__title{
+                    
+                }
+                &__desc{
+                   
+                }
+            }
+            &__img{
+                
+                &1{
+                }
+                &2{
+    
+                }
+            }
+        }
+    
+        &__bottom{
+            flex-direction: column;
+            margin-right: auto;
+            margin-left: auto;
+            &__card{
+                
+            }
+            .card{
+                &__title{
+                    
+                }
+                &__desc{
+                    
+                }
+    
+                &:nth-child(1){
+                    &::before{
+                        display: none;
+                    }
+                }
+                &:nth-child(2){
+                    &::before{
+                        display: none;
+                    }
+                }
+                &:nth-child(3){
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .simple{
+        
+        
+        &::after{
+            display: none;
+        }
+    
+        &__top{
+            flex-direction: column-reverse;
+            .simple__text{
+                text-align: center;
+                &__title{
+                    
+                }
+                &__desc{
+                   
+                }
+            }
+            &__img{
+                
+                &1{
+                }
+                &2{
+                    top: 3130px;
+                    // left: 30px;
+                }
+            }
+        }
+    
+        &__bottom{
+            flex-direction: column;
+            margin-right: auto;
+            margin-left: auto;
+            &__card{
+                
+            }
+            .card{
+                &__title{
+                    
+                }
+                &__desc{
+                    top: 10px;
+                }
+    
+                &:nth-child(1){
+                    &::before{
+                        display: none;
+                    }
+                }
+                &:nth-child(2){
+                    &::before{
+                        display: none;
+                    }
+                }
+                &:nth-child(3){
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
